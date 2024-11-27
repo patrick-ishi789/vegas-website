@@ -1,10 +1,166 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 25px 9%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.navbar .logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: border-radius: 2px;;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 35px;
+}
+
+.navbar ul li a {
+    font-size: 20px;
+    font-weight: 500;
+    color: blanchedalmond;
+    transition: .5s;
+}
+
+.navbar ul li:hover a,
+.navbar ul li.active a {
+    color: skyblue;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    height: 100vh;
+    padding: 60px 9% 0;
+    color: bisque;
+}
+
+.home-info h1 {
+    font-size: 55px;
+}
+
+.home-info h2 {
+    font-size: 32px;
+    margin-top: -10px;
+}
+
+.home-info h2 span {
+    position: relative;
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: 0.7px aqua;
+    animation: display-text 10s linear infinite;
+}
+
+@keyframes display-text {
+    0%, 25% {
+        color: transparent;
+    }
+    40%, 60% {
+        color: aqua;
+    }
+    83.34%, 100% {
+        color: transparent;
+    }
+}
+
+.home-info h2 span::before {
+    content: attr(data-text);
+    position: absolute;
+    color: aqua;
+    animation: typing 10s steps(10) infinite alternate;
+}
+
+@keyframes typing {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.home-info .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: aqua;
+    border: 2px solid aqua;
+    border-radius: 40px;
+    font-size: 16px;
+    color: blue;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.home-info .btn:hover {
+    background: transparent;
+    color: aqua;
+    box-shadow: 0 0 10px aqua;
+}
+
+.home-info .btn-sci .sci a {
+    display: inline-block;
+    padding: 10px;
+    margin: 0 10px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 50%;
+    color: aqua;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.home-info .btn-sci .sci a:hover {
+    background: transparent;
+    color: aqua;
+    box-shadow: 0 0 10px aqua;
+}
+
+.bars-animation .bar {
+    width: 100%;
+    height: 100%;
+    background: black;
+    transform: translateY(-100%);
+    animation: show-bars 0.5s ease-in-out forwards;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes show-bars {
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
 }
 
 a {
